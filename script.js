@@ -323,22 +323,75 @@ document.addEventListener('DOMContentLoaded', function () {
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
 
-  // Toggle navigation
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
+  // Update navigation links per latest requirements
+  document.querySelectorAll('.nav-links').forEach(navMenu => {
+    const removeNavItem = (href) => {
+      navMenu.querySelectorAll(`a[href="${href}"]`).forEach(anchor => {
+        const item = anchor.closest('li');
+        if (item) {
+          item.remove();
+        }
+      });
+    };
 
-    // Animate links
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+    removeNavItem('what-we-do.html');
+    ['press-release.html', 'vacancy.html', 'historic-landmarks.html', 'photo-gallery.html', 'researches.html']
+      .forEach(removeNavItem);
+  });
+
+  // Toggle navigation
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      burger.classList.toggle('active');
+
+      // Animate links
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = '';
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+        }
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('active') &&
+        !nav.contains(e.target) &&
+        !burger.contains(e.target)) {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+        navLinks.forEach(link => {
+          link.style.animation = '';
+        });
       }
     });
 
-    // Burger animation
-    burger.classList.toggle('toggle');
-  });
+    // Close menu on window resize if it becomes desktop view
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+        navLinks.forEach(link => {
+          link.style.animation = '';
+        });
+      }
+    });
+
+    // Close menu when a nav link is clicked (mobile)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          nav.classList.remove('active');
+          burger.classList.remove('active');
+          navLinks.forEach(l => {
+            l.style.animation = '';
+          });
+        }
+      });
+    });
+  }
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -659,6 +712,90 @@ style.innerHTML = `
     .region-card.animated:nth-child(1) { animation-delay: 0.1s; }
     .region-card.animated:nth-child(2) { animation-delay: 0.2s; }
     .region-card.animated:nth-child(3) { animation-delay: 0.3s; }
+  }
+
+  // Scroll reveal animations
+  const revealElements = document.querySelectorAll('.reveal, .service-card, .project-card, .news-card, .stat-item');
+  
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active', 'animated');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  revealElements.forEach(element => {
+    revealObserver.observe(element);
+  });
+
+  // Parallax effect for hero sections
+  const heroSections = document.querySelectorAll('.hero');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    heroSections.forEach(hero => {
+      const rate = scrolled * 0.5;
+      hero.style.transform = `translateY(${rate}px)`;
+    });
+  });
+
+  // Enhanced card animations on hover
+  const cards = document.querySelectorAll('.service-card, .project-card, .news-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+    });
+  });
+
+  // Smooth number counter animation
+  const animateCounter = (element, target, duration = 2000) => {
+    let start = 0;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        element.textContent = target + '+';
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(start) + '+';
+      }
+    }, 16);
+  };
+
+  // Animate stat numbers
+  const statNumbers = document.querySelectorAll('.stat-number');
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = parseInt(entry.target.textContent);
+        if (!isNaN(target)) {
+          animateCounter(entry.target, target);
+          statObserver.unobserve(entry.target);
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statNumbers.forEach(stat => {
+    statObserver.observe(stat);
+  });
+
+  // Enhanced navigation active state
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath.split('/').pop() || 
+        (currentPath === '/' && link.getAttribute('href') === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
     .region-card.animated:nth-child(4) { animation-delay: 0.4s; }
     .region-card.animated:nth-child(5) { animation-delay: 0.5s; }
     .region-card.animated:nth-child(6) { animation-delay: 0.6s; }
