@@ -1,114 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find Regional Majlis offices across Ethiopia - Addis Ababa, Afar, Amhara, Oromia, and more.">
   <title>Regional Majlis | Ethiopian Islamic Affairs Supreme Council</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="top-bar">
       <div class="container">
         <div class="contact-info">
-          <span>Call Us: 001-251-114-664-941</span>
-          <span><a href="mailto:info@ethiopianmajlis.org.et">info@ethiopianmajlis.org.et</a></span>
+          <span><i class="fas fa-phone-alt"></i> +251 114 664 941</span>
+          <span><i class="fas fa-envelope"></i> <a href="mailto:info@ethiopianmajlis.org.et">info@ethiopianmajlis.org.et</a></span>
         </div>
-        <a href="donate.html" class="donate-btn">Donate</a>
+        <a href="donate.html" class="donate-btn"><i class="fas fa-heart"></i> Donate</a>
       </div>
     </div>
     <div class="main-header">
       <div class="container">
-        <div class="logo">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="logo-img" />
-          <div class="logo-text"></div>
-        </div>
+        <a href="index.html" class="logo">
+          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="logo-img">
+        </a>
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="who-we-are.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="regional-majlis.html">Regional Majlis</a></li>
+            <li><a href="regional-majlis.html" class="active">Regional Majlis</a></li>
             <li><a href="islamic-heritage.html">Resources</a></li>
             <li><a href="women-and-youth.html">Women and Youth</a></li>
+            <li><a href="who-we-are.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="contact-us.html">Contact</a></li>
           </ul>
-          <div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
         </nav>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="regions">
+    <!-- Page Hero -->
+    <section class="page-hero">
       <div class="container">
-        <h2>Regional Majlis</h2>
-        <div class="regions-grid">
-          <a class="region-card" href="#addis-ababa"><h3>Addis Ababa Majlis</h3></a>
-          <a class="region-card" href="#afar"><h3>Afar Regional Majlis</h3></a>
-          <a class="region-card" href="#amhara"><h3>Amhara Regional Majlis</h3></a>
-          <a class="region-card" href="#benshangul-gumuz"><h3>Benshangul Gumuz Regional Majlis</h3></a>
-          <a class="region-card" href="#dire-dawa"><h3>Dire Dawa Majlis</h3></a>
-          <a class="region-card" href="#gambela"><h3>Gambela Regional Majlis</h3></a>
-          <a class="region-card" href="#harari"><h3>Harari Regional Majlis</h3></a>
-          <a class="region-card" href="#oromia"><h3>Oromia Regional Majlis</h3></a>
-          <a class="region-card" href="#sidama"><h3>Sidama Regional Majlis</h3></a>
-          <a class="region-card" href="#somali"><h3>Somali Regional Majlis</h3></a>
-          <a class="region-card" href="#southern"><h3>Southern Regional Majlis</h3></a>
-          <a class="region-card" href="#south-west-ethiopia"><h3>South West Ethiopia Regional Majlis</h3></a>
-          <a class="region-card" href="#tigray"><h3>Tigray Regional Majlis</h3></a>
+        <h1>Regional Majlis</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Regional Majlis</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+
+    <!-- Regional Offices Section -->
+    <section class="branches-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Regional Presence</h2>
+          <p>The Majlis maintains offices across all regions of Ethiopia to serve the Muslim community</p>
         </div>
+        
+        <div class="branches-grid">
+          <div class="branch-card" id="addis-ababa">
+            <div class="branch-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3>Addis Ababa City Majlis</h3>
+            <p>Headquarters - Tor Hayloch</p>
+            <p><i class="fas fa-phone"></i> +251 114 664 941</p>
+            <p><i class="fas fa-envelope"></i> addis@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="afar">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Afar Regional Majlis</h3>
+            <p>Semera, Afar Region</p>
+            <p><i class="fas fa-phone"></i> +251 33 666 0000</p>
+            <p><i class="fas fa-envelope"></i> afar@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="amhara">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Amhara Regional Majlis</h3>
+            <p>Bahir Dar, Amhara Region</p>
+            <p><i class="fas fa-phone"></i> +251 58 220 0000</p>
+            <p><i class="fas fa-envelope"></i> amhara@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="benshangul-gumuz">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Benshangul Gumuz Majlis</h3>
+            <p>Assosa, Benshangul Gumuz</p>
+            <p><i class="fas fa-phone"></i> +251 57 775 0000</p>
+            <p><i class="fas fa-envelope"></i> benshangul@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="dire-dawa">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Dire Dawa City Majlis</h3>
+            <p>Kezira, Dire Dawa</p>
+            <p><i class="fas fa-phone"></i> +251 25 111 2233</p>
+            <p><i class="fas fa-envelope"></i> diredawa@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="gambela">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Gambela Regional Majlis</h3>
+            <p>Gambela Town</p>
+            <p><i class="fas fa-phone"></i> +251 47 551 0000</p>
+            <p><i class="fas fa-envelope"></i> gambela@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="harari">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Harari Regional Majlis</h3>
+            <p>Harar City</p>
+            <p><i class="fas fa-phone"></i> +251 25 666 7788</p>
+            <p><i class="fas fa-envelope"></i> harari@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="oromia">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Oromia Regional Majlis</h3>
+            <p>Adama, Oromia Region</p>
+            <p><i class="fas fa-phone"></i> +251 22 111 0000</p>
+            <p><i class="fas fa-envelope"></i> oromia@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="sidama">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Sidama Regional Majlis</h3>
+            <p>Hawassa, Sidama Region</p>
+            <p><i class="fas fa-phone"></i> +251 46 220 0000</p>
+            <p><i class="fas fa-envelope"></i> sidama@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="somali">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Somali Regional Majlis</h3>
+            <p>Jijiga, Somali Region</p>
+            <p><i class="fas fa-phone"></i> +251 25 775 0000</p>
+            <p><i class="fas fa-envelope"></i> somali@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="snnpr">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>South Ethiopia Majlis</h3>
+            <p>Hawassa</p>
+            <p><i class="fas fa-phone"></i> +251 46 221 0000</p>
+            <p><i class="fas fa-envelope"></i> south@ethiopianmajlis.org.et</p>
+          </div>
+          
+          <div class="branch-card" id="tigray">
+            <div class="branch-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Tigray Regional Majlis</h3>
+            <p>Mekelle, Tigray Region</p>
+            <p><i class="fas fa-phone"></i> +251 34 444 5566</p>
+            <p><i class="fas fa-envelope"></i> tigray@ethiopianmajlis.org.et</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png"
-                        alt="Footer Logo" class="footer-logo">
-                    <p>The country's highest Islamic authority, representing Ethiopian Muslims both domestically and
-                        abroad.</p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/share/1P3Zkc5NVA/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://x.com/eiasc1?s=20"><i class="fa-brands fa-twitter"></i></a>
 
-                        <a href="+251920400400"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="who-we-are.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="contact-us.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="community-registration.html">Community Registration</a></li>
-                            <li><a href="halal-certification.html">Halal Certification</a></li>
-                            <li><a href="hajj-and-umrah.html">Hajj and Umrah</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="islamic-heritage.html">Islamic Heritage</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Majlis Community Engagement Portal. All rights reserved.</p>
-            </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="footer-logo">
+          <p>The country's highest Islamic authority, representing Ethiopian Muslims both domestically and abroad.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/eiasc1?s=20" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="tel:+251920400400" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
-    </footer>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="who-we-are.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="community-registration.html">Community Registration</a></li>
+              <li><a href="halal-certification.html">Halal Certification</a></li>
+              <li><a href="hajj-and-umrah.html">Hajj & Umrah</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="islamic-heritage.html">Islamic Heritage</a></li>
+              <li><a href="regional-majlis.html">Regional Majlis</a></li>
+              <li><a href="women-and-youth.html">Women & Youth</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Ethiopian Islamic Affairs Supreme Council. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

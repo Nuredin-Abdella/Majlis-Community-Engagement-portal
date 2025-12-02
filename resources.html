@@ -1,750 +1,194 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download Islamic resources, publications, and documents from the Ethiopian Islamic Affairs Supreme Council.">
   <title>Resources | Ethiopian Islamic Affairs Supreme Council</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .resources-page { padding: var(--space-4xl) 0; background: var(--dark); }
+    .resources-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); }
+    .category-card { background: var(--dark-light); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-xl); padding: var(--space-2xl); transition: all var(--transition-base); }
+    .category-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); border-color: rgba(var(--primary-rgb), 0.3); }
+    .category-icon { width: 60px; height: 60px; margin-bottom: var(--space-lg); display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.2), rgba(var(--primary-rgb), 0.05)); border-radius: var(--radius-lg); color: var(--primary); font-size: 1.5rem; }
+    .category-card h3 { color: var(--white); margin-bottom: var(--space-sm); }
+    .category-card p { color: var(--gray-400); font-size: 0.95rem; margin-bottom: var(--space-lg); }
+    .download-list { border-top: 1px solid rgba(255,255,255,0.08); padding-top: var(--space-md); }
+    .download-item { display: flex; align-items: center; justify-content: space-between; padding: var(--space-sm) 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .download-item:last-child { border-bottom: none; }
+    .download-info { display: flex; align-items: center; gap: var(--space-sm); }
+    .download-info i { color: var(--primary); }
+    .download-info span { color: var(--gray-300); font-size: 0.9rem; }
+    .download-btn { color: var(--primary); font-size: 0.85rem; display: flex; align-items: center; gap: var(--space-xs); transition: all var(--transition-fast); }
+    .download-btn:hover { color: var(--primary-light); }
+  </style>
+</head>
 <body>
   <header>
     <div class="top-bar">
       <div class="container">
         <div class="contact-info">
-          <span>Call Us: 001-251-114-664-941</span>
-          <span><a href="mailto:info@ethiopianmajlis.org.et">info@ethiopianmajlis.org.et</a></span>
+          <span><i class="fas fa-phone-alt"></i> +251 114 664 941</span>
+          <span><i class="fas fa-envelope"></i> <a href="mailto:info@ethiopianmajlis.org.et">info@ethiopianmajlis.org.et</a></span>
         </div>
-        <a href="donate.html" class="donate-btn">Donate</a>
+        <a href="donate.html" class="donate-btn"><i class="fas fa-heart"></i> Donate</a>
       </div>
     </div>
     <div class="main-header">
       <div class="container">
-        <div class="logo">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="logo-img" />
-          <div class="logo-text"><h1>Ethiopian Islamic Affairs Supreme Council</h1></div>
-        </div>
-        <nav>
+        <a href="index.html" class="logo">
+          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="logo-img">
+        </a>
+                <nav>
           <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="who-we-are.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="regional-majlis.html">Regional Majlis</a></li>
-            <li><a href="islamic-heritage.html">Resources</a></li>
+            <li><a href="islamic-heritage.html" class="active">Resources</a></li>
             <li><a href="women-and-youth.html">Women and Youth</a></li>
+            <li><a href="who-we-are.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="contact-us.html">Contact</a></li>
           </ul>
-          <div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
         </nav>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="page-hero">
       <div class="container">
-        <div class="hero-content">
-          <h1>Islamic Resources Center</h1>
-          <p>Explore our comprehensive collection of Islamic knowledge and resources</p>
-          <div class="hero-search">
-            <form class="search-form">
-              <input type="text" placeholder="Search resources..." class="search-input">
-              <button type="submit" class="search-btn">
-                <i class="fas fa-search"></i> Search
-              </button>
-            </form>
-          </div>
-          <div class="quick-links">
-            <a href="#quran" class="quick-link">
-              <i class="fas fa-quran"></i>
-              <span>Quran</span>
-            </a>
-            <a href="#hadith" class="quick-link">
-              <i class="fas fa-book-open"></i>
-              <span>Hadith</span>
-            </a>
-            <a href="#fiqh" class="quick-link">
-              <i class="fas fa-balance-scale"></i>
-              <span>Fiqh</span>
-            </a>
-          </div>
-        </div>
+        <h1>Downloads & Resources</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Resources</li>
+          </ol>
+        </nav>
       </div>
     </section>
 
-    <!-- Featured Resources -->
-    <section class="featured-resources">
-      <div class="container">
-        <div class="section-header">
-          <h2>Explore Our Rich Islamic Heritage</h2>
-          <p>Discover a wealth of knowledge about Islam, Ethiopian Islamic history, and cultural heritage</p>
-        </div>
-
-        <div class="resource-categories">
-          <!-- Category 1 -->
-          <div class="resource-category">
-            <div class="category-header">
-              <div class="category-icon">
-                <i class="fas fa-mosque"></i>
-              </div>
-              <h3>Islamic Heritage</h3>
-            </div>
-            <p>Explore the rich Islamic heritage of Ethiopia, including historical documents, manuscripts, and cultural artifacts.</p>
-            <a href="islamic-heritage.html" class="btn btn-outline">Explore Heritage <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <!-- Category 2 -->
-          <div class="resource-category">
-            <div class="category-header">
-              <div class="category-icon">
-                <i class="fas fa-landmark"></i>
-              </div>
-              <h3>Historic Landmarks</h3>
-            </div>
-            <p>Discover significant Islamic landmarks across Ethiopia, from ancient mosques to historical Islamic sites.</p>
-            <a href="historic-landmarks.html" class="btn btn-outline">View Landmarks <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <!-- Category 3 -->
-          <div class="resource-category">
-            <div class="category-header">
-              <div class="category-icon">
-                <i class="fas fa-images"></i>
-              </div>
-              <h3>Photo Gallery</h3>
-            </div>
-            <p>Browse our collection of photographs showcasing Islamic life, architecture, and events in Ethiopia.</p>
-            <a href="photo-gallery.html" class="btn btn-outline">View Gallery <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <!-- Category 4 -->
-          <div class="resource-category">
-            <div class="category-header">
-              <div class="category-icon">
-                <i class="fas fa-book"></i>
-              </div>
-              <h3>Research & Publications</h3>
-            </div>
-            <p>Access academic research, publications, and studies on Islamic topics and Ethiopian Muslim communities.</p>
-            <a href="researches.html" class="btn btn-outline">Read Research <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Content -->
-    <section class="featured-content">
-      <div class="container">
-        <div class="section-header">
-          <h2>Featured Resources</h2>
-          <p>Handpicked content to enrich your knowledge</p>
-        </div>
-
-        <div class="content-grid">
-          <!-- Featured Item 1 -->
-          <div class="content-card">
-            <div class="content-image">
-              <img src="assets/wp-content/uploads/2023/06/islamic-manuscripts.jpg" alt="Islamic Manuscripts">
-              <div class="content-tag">Heritage</div>
-            </div>
-            <div class="content-body">
-              <h3>Ancient Islamic Manuscripts</h3>
-              <p class="content-meta"><i class="far fa-calendar-alt"></i> April 15, 2023</p>
-              <p>Discover the rich collection of Islamic manuscripts preserved in Ethiopian libraries and mosques, some dating back to the 9th century.</p>
-              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <!-- Featured Item 2 -->
-          <div class="content-card">
-            <div class="content-image">
-              <img src="assets/wp-content/uploads/2023/06/haramaya-mosque.jpg" alt="Haramaya Mosque">
-              <div class="content-tag">Landmark</div>
-            </div>
-            <div class="content-body">
-              <h3>Haramaya Mosque: A Historical Gem</h3>
-              <p class="content-meta"><i class="far fa-calendar-alt"></i> March 28, 2023</p>
-              <p>Explore the history and architectural significance of one of Ethiopia's oldest mosques, a symbol of Islamic heritage in the region.</p>
-              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <!-- Featured Item 3 -->
-          <div class="content-card">
-            <div class="content-image">
-              <img src="assets/wp-content/uploads/2023/06/islamic-education.jpg" alt="Islamic Education">
-              <div class="content-tag">Education</div>
-            </div>
-            <div class="content-body">
-              <h3>Islamic Education in Ethiopia</h3>
-              <p class="content-meta"><i class="far fa-calendar-alt"></i> February 10, 2023</p>
-              <p>Learn about the traditional and modern Islamic education systems in Ethiopia and their role in preserving Islamic knowledge.</p>
-              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resource Library -->
-    <section class="resource-library">
+    <section class="resources-page">
       <div class="container">
         <div class="section-header">
           <h2>Resource Library</h2>
-          <p>Browse our collection of digital resources</p>
+          <p>Download official documents, forms, and educational materials</p>
         </div>
-
-        <div class="library-filters">
-          <button class="filter-btn active" data-filter="all">All Resources</button>
-          <button class="filter-btn" data-filter="books">Books</button>
-          <button class="filter-btn" data-filter="articles">Articles</button>
-          <button class="filter-btn" data-filter="videos">Videos</button>
-          <button class="filter-btn" data-filter="audio">Audio</button>
-        </div>
-
-        <div class="resource-grid">
-          <!-- Resource 1 -->
-          <div class="resource-item" data-category="books">
-            <div class="resource-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <div class="resource-info">
-              <h3>Islamic History of Ethiopia</h3>
-              <p class="resource-meta">Book • PDF • 5.2 MB</p>
-              <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
-            </div>
-          </div>
-
-          <!-- Resource 2 -->
-          <div class="resource-item" data-category="articles">
-            <div class="resource-icon">
-              <i class="far fa-file-alt"></i>
-            </div>
-            <div class="resource-info">
-              <h3>The Role of Islam in Ethiopian Culture</h3>
-              <p class="resource-meta">Article • PDF • 1.1 MB</p>
-              <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+        
+        <div class="resources-categories">
+          <div class="category-card">
+            <div class="category-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>Official Documents</h3>
+            <p>Official publications, decrees, and announcements from the Majlis.</p>
+            <div class="download-list">
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Annual Report 2024</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Strategic Plan 2025</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Constitution</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
             </div>
           </div>
-
-          <!-- Resource 3 -->
-          <div class="resource-item" data-category="videos">
-            <div class="resource-icon">
-              <i class="fas fa-play-circle"></i>
-            </div>
-            <div class="resource-info">
-              <h3>Documentary: Islam in Ethiopia</h3>
-              <p class="resource-meta">Video • MP4 • 45 min</p>
-              <a href="#" class="btn-download"><i class="fas fa-play"></i> Watch Now</a>
-            </div>
-          </div>
-
-          <!-- Resource 4 -->
-          <div class="resource-item" data-category="audio">
-            <div class="resource-icon">
-              <i class="fas fa-music"></i>
-            </div>
-            <div class="resource-info">
-              <h3>Quran Recitation in Ethiopian Style</h3>
-              <p class="resource-meta">Audio • MP3 • 32 min</p>
-              <a href="#" class="btn-download"><i class="fas fa-play"></i> Listen Now</a>
+          
+          <div class="category-card">
+            <div class="category-icon"><i class="fas fa-clipboard-list"></i></div>
+            <h3>Application Forms</h3>
+            <p>Forms for various services including registration and certification.</p>
+            <div class="download-list">
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Community Registration Form</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Halal Certification Application</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Accreditation Request Form</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="#" class="btn btn-primary">View All Resources <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-      <div class="container">
-        <div class="newsletter-content">
-          <div class="newsletter-text">
-            <h3>Stay Updated</h3>
-            <p>Subscribe to our newsletter for the latest resources and updates</p>
-          </div>
-          <form class="newsletter-form">
-            <div class="form-group">
-              <input type="email" placeholder="Enter your email" required>
-              <button type="submit" class="btn btn-primary">Subscribe</button>
+          
+          <div class="category-card">
+            <div class="category-icon"><i class="fas fa-book"></i></div>
+            <h3>Educational Materials</h3>
+            <p>Islamic educational resources and study materials.</p>
+            <div class="download-list">
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Prayer Guide (Amharic)</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Ramadan Guide</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Hajj Preparation Guide</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
             </div>
-          </form>
+          </div>
+          
+          <div class="category-card">
+            <div class="category-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Islamic Calendar</h3>
+            <p>Hijri calendar and important Islamic dates.</p>
+            <div class="download-list">
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Islamic Calendar 1446 AH</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+              <div class="download-item">
+                <div class="download-info"><i class="fas fa-file-pdf"></i><span>Prayer Timetable 2025</span></div>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
-  <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png"
-                        alt="Footer Logo" class="footer-logo">
-                    <p>The country's highest Islamic authority, representing Ethiopian Muslims both domestically and
-                        abroad.</p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/share/1P3Zkc5NVA/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://x.com/eiasc1?s=20"><i class="fa-brands fa-twitter"></i></a>
 
-                        <a href="+251920400400"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="who-we-are.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="contact-us.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="community-registration.html">Community Registration</a></li>
-                            <li><a href="halal-certification.html">Halal Certification</a></li>
-                            <li><a href="hajj-and-umrah.html">Hajj and Umrah</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="islamic-heritage.html">Islamic Heritage</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Majlis Community Engagement Portal. All rights reserved.</p>
-            </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="footer-logo">
+          <p>The country's highest Islamic authority, representing Ethiopian Muslims both domestically and abroad.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/eiasc1?s=20" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="tel:+251920400400" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
-                              </footer>
-
+        <div class="footer-links">
+          <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="who-we-are.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="contact-us.html">Contact</a></li></ul></div>
+          <div class="footer-column"><h4>Services</h4><ul><li><a href="community-registration.html">Community Registration</a></li><li><a href="halal-certification.html">Halal Certification</a></li><li><a href="hajj-and-umrah.html">Hajj & Umrah</a></li></ul></div>
+          <div class="footer-column"><h4>Resources</h4><ul><li><a href="islamic-heritage.html">Islamic Heritage</a></li><li><a href="regional-majlis.html">Regional Majlis</a></li></ul></div>
+        </div>
+      </div>
+      <div class="copyright"><p>&copy; 2025 Ethiopian Islamic Affairs Supreme Council. All rights reserved.</p></div>
+    </div>
+  </footer>
   <script src="script.js"></script>
-  <script>
-    // Tab functionality
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Remove active class from all buttons and contents
-        tabBtns.forEach(btn => btn.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        
-        // Add active class to clicked button and corresponding content
-        btn.classList.add('active');
-        const tabId = btn.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
-        
-        // Load content dynamically if not already loaded
-        loadTabContent(tabId);
-      });
-    });
-
-    // Function to load tab content dynamically
-    function loadTabContent(tabId) {
-      const tabContent = document.getElementById(tabId);
-      
-      // Only load if content is empty
-      if (tabContent.children.length === 0) {
-        // In a real implementation, you would fetch this content from the server
-        // This is a simplified example
-        let content = '';
-        
-        switch(tabId) {
-          case 'hadith-tab':
-            content = '\
-              <div class="tab-content-inner">\
-                <div class="tab-header">\
-                  <h2>Hadith Collections</h2>\
-                  <p>Authentic hadith collections with translations and explanations</p>\
-                </div>\
-                \
-                <div class="hadith-grid">\
-                  <div class="hadith-card">\
-                    <div class="hadith-icon">\
-                      <i class="fas fa-book"></i>\
-                    </div>\
-                    <h3>Sahih al-Bukhari</h3>\
-                    <p>Complete collection with Amharic and English translations</p>\
-                    <div class="resource-actions">\
-                      <a href="#" class="btn btn-outline">Read Online</a>\
-                      <a href="#" class="btn btn-outline">Download PDF</a>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="hadith-card">\
-                    <div class="hadith-icon">\
-                      <i class="fas fa-book"></i>\
-                    </div>\
-                    <h3>Sahih Muslim</h3>\
-                    <p>Complete collection with Amharic and English translations</p>\
-                    <div class="resource-actions">\
-                      <a href="#" class="btn btn-outline">Read Online</a>\
-                      <a href="#" class="btn btn-outline">Download PDF</a>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="hadith-card">\
-                    <div class="hadith-icon">\
-                      <i class="fas fa-headphones"></i>\
-                    </div>\
-                    <h3>Audio Hadith</h3>\
-                    <p>Listen to hadith with explanations in Amharic</p>\
-                    <div class="resource-actions">\
-                      <a href="#" class="btn btn-outline">Listen Now</a>\
-                      <a href="#" class="btn btn-outline">Download</a>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="hadith-card">\
-                    <div class="hadith-icon">\
-                      <i class="fas fa-graduation-cap"></i>\
-                    </div>\
-                    <h3>Hadith Studies</h3>\
-                    <p>Learn about hadith sciences and authentication</p>\
-                    <div class="resource-actions">\
-                      <a href="#" class="btn btn-outline">Start Learning</a>\
-                    </div>\
-                  </div>\
-                </div>\
-                \
-                <div class="hadith-search">\
-                  <h3>Search Hadith</h3>\
-                  <div class="search-box">\
-                    <input type="text" placeholder="Search hadith by keyword...">\
-                    <select>\
-                      <option value="all">All Collections</option>\
-                      <option value="bukhari">Sahih al-Bukhari</option>\
-                      <option value="muslim">Sahih Muslim</option>\
-                      <option value="abudawud">Sunan Abu Dawud</option>\
-                      <option value="tirmidhi">Jami` at-Tirmidhi</option>\
-                    </select>\
-                    <button class="btn btn-primary">Search</button>\
-                  </div>\
-                </div>\
-              </div>';
-            break;
-            break;
-            
-          case 'fiqh-tab':
-            content = '\
-              <div class="tab-content-inner">\
-                <div class="tab-header">\
-                  <h2>Fiqh & Islamic Rulings</h2>\
-                  <p>Comprehensive guides to Islamic jurisprudence and daily practices</p>\
-                </div>\
-                \
-                <div class="fiqh-categories">\
-                  <div class="fiqh-category">\
-                    <h3>Worship</h3>\
-                    <ul>\
-                      <li><a href="#">Salah (Prayer)</a></li>\
-                      <li><a href="#">Sawm (Fasting)</a></li>\
-                      <li><a href="#">Zakat (Charity)</a></li>\
-                      <li><a href="#">Hajj & Umrah</a></li>\
-                    </ul>\
-                  </div>\
-                  \
-                  <div class="fiqh-category">\
-                    <h3>Transactions</h3>\
-                    <ul>\
-                      <li><a href="#">Business & Trade</a></li>\
-                      <li><a href="#">Islamic Finance</a></li>\
-                      <li><a href="#">Inheritance</a></li>\
-                      <li><a href="#">Marriage & Divorce</a></li>\
-                    </ul>\
-                  </div>\
-                  \
-                  <div class="fiqh-category">\
-                    <h3>Food & Drink</h3>\
-                    <ul>\
-                      <li><a href="#">Halal & Haram Foods</a></li>\
-                      <li><a href="#">Slaughtering</a></li>\
-                      <li><a href="#">Dietary Laws</a></li>\
-                    </ul>\
-                  </div>\
-                  \
-                  <div class="fiqh-category">\
-                    <h3>Contemporary Issues</h3>\
-                    <ul>\
-                      <li><a href="#">Medical Ethics</a></li>\
-                      <li><a href="#">Technology</a></li>\
-                      <li><a href="#">Social Media</a></li>\
-                      <li><a href="#">Environment</a></li>\
-                    </ul>\
-                  </div>\
-                </div>\
-                \
-                <div class="fiqh-resources">\
-                  <h3>Featured Fiqh Resources</h3>\
-                  <div class="resource-list">\
-                    <div class="resource-item">\
-                      <i class="fas fa-file-pdf"></i>\
-                      <div class="resource-info">\
-                        <h4>Fiqh of Worship - Amharic</h4>\
-                        <p>Comprehensive guide to Islamic worship practices</p>\
-                        <div class="resource-meta">\
-                          <span><i class="fas fa-file"></i> PDF</span>\
-                          <span><i class="fas fa-download"></i> 2.4 MB</span>\
-                        </div>\
-                      </div>\
-                      <a href="#" class="btn btn-outline">Download</a>\
-                    </div>\
-                    \
-                    <div class="resource-item">\
-                      <i class="fas fa-video"></i>\
-                      <div class="resource-info">\
-                        <h4>Fiqh of Family - Video Series</h4>\
-                        <p>Complete guide to Islamic family law</p>\
-                        <div class="resource-meta">\
-                          <span><i class="fas fa-video"></i> Video Series</span>\
-                          <span><i class="fas fa-clock"></i> 12 Episodes</span>\
-                        </div>\
-                      </div>\
-                      <a href="#" class="btn btn-outline">Watch Now</a>\
-                    </div>\
-                  </div>\
-                </div>\
-              </div>';
-            break;
-            break;
-            
-          case 'history-tab':
-            content = '\
-              <div class="tab-content-inner">\
-                <div class="tab-header">\
-                  <h2>Islamic History & Heritage</h2>\
-                  <p>Explore the rich history of Islam and its presence in Ethiopia</p>\
-                </div>\
-                \
-                <div class="history-timeline">\
-                  <div class="timeline-item">\
-                    <div class="timeline-date">615 CE</div>\
-                    <div class="timeline-content">\
-                      <h3>First Hijrah to Abyssinia</h3>\
-                      <p>The first group of Muslims migrated to Abyssinia (modern-day Ethiopia) to escape persecution in Mecca, under the protection of the Christian king Negus.</p>\
-                      <a href="#" class="btn-text">Read More <i class=\"fas fa-arrow-right\"></i></a>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="timeline-item">\
-                    <div class="timeline-date">7th-9th Century</div>\
-                    <div class="timeline-content">\
-                      <h3>Early Islamic Presence</h3>\
-                      <p>Establishment of early Muslim communities along trade routes and coastal areas of the Horn of Africa.</p>\
-                      <a href="#" class="btn-text">Read More <i class=\"fas fa-arrow-right\"></i></a>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="timeline-item">\
-                    <div class="timeline-date">13th-16th Century</div>\
-                    <div class="timeline-content">\
-                      <h3>Islamic Sultanates</h3>\
-                      <p>Rise of powerful Islamic sultanates in the region, including the Sultanate of Ifat and Adal Sultanate.</p>\
-                      <a href="#" class="btn-text">Read More <i class=\"fas fa-arrow-right\"></i></a>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="timeline-item">\
-                    <div class="timeline-date">19th Century</div>\
-                    <div class="timeline-content">\
-                      <h3>Modern Era</h3>\
-                      <p>Expansion of Islamic education and scholarship in Ethiopia, establishment of madrasas and Islamic centers.</p>\
-                      <a href="#" class="btn-text">Read More <i class=\"fas fa-arrow-right\"></i></a>\
-                    </div>\
-                  </div>\
-                </div>\
-                \
-                <div class="historical-figures">\
-                  <h3>Key Historical Figures</h3>\
-                  <div class="figures-grid">\
-                    <div class="figure-card">\
-                      <div class="figure-image" style="background-image: url(\'assets/images/negus.jpg\');"></div>\
-                      <h4>Negus Ashama</h4>\
-                      <p>The Christian king who granted asylum to the first Muslim migrants</p>\
-                    </div>\
-                    \
-                    <div class="figure-card">\
-                      <div class="figure-image" style="background-image: url(\'assets/images/ahmed-gragn.jpg\');"></div>\
-                      <h4>Imam Ahmed ibn Ibrahim</h4>\
-                      <p>Leader of the 16th century conquest of Abyssinia</p>\
-                    </div>\
-                    \
-                    <div class="figure-card">\
-                      <div class="figure-image" style="background-image: url(\'assets/images/shaikh-zakariya.jpg\');"></div>\
-                      <h4>Sheikh Zakariya</h4>\
-                      <p>Prominent 19th century Islamic scholar and reformer</p>\
-                    </div>\
-                  </div>\
-                </div>\
-              </div>';
-            break;
-            break;
-            
-          case 'library-tab':
-            content = '\
-              <div class="tab-content-inner">\
-                <div class="tab-header">\
-                  <h2>Digital Library</h2>\
-                  <p>Access our collection of digital books, articles, and research papers</p>\
-                </div>\
-                \
-                <div class="library-filters">\
-                  <div class="filter-group">\
-                    <label>Category:</label>\
-                    <select>\
-                      <option>All Categories</option>\
-                      <option>Tafsir</option>\
-                      <option>Hadith</option>\
-                      <option>Fiqh</option>\
-                      <option>History</option>\
-                      <option>Biography</option>\
-                    </select>\
-                  </div>\
-                  \
-                  <div class="filter-group">\
-                    <label>Language:</label>\
-                    <select>\
-                      <option>All Languages</option>\
-                      <option>Amharic</option>\
-                      <option>English</option>\
-                      <option>Arabic</option>\
-                      <option>Oromiffa</option>\
-                    </select>\
-                  </div>\
-                  \
-                  <div class="filter-group">\
-                    <label>Format:</label>\
-                    <select>\
-                      <option>All Formats</option>\
-                      <option>PDF</option>\
-                      <option>ePub</option>\
-                      <option>Audio Book</option>\
-                      <option>Video</option>\
-                    </select>\
-                  </div>\
-                  \
-                  <div class="search-box">\
-                    <input type="text" placeholder="Search library...">\
-                    <button class="btn btn-primary">Search</button>\
-                  </div>\
-                </div>\
-                \
-                <div class="library-grid">\
-                  <div class="book-card">\
-                    <div class="book-cover">\
-                      <i class="fas fa-book"></i>\
-                      <span class="format-badge">PDF</span>\
-                    </div>\
-                    <div class="book-info">\
-                      <h3>Stories of the Prophets</h3>\
-                      <p class="author">Ibn Kathir</p>\
-                      <div class="book-meta">\
-                        <span><i class="fas fa-language"></i> Amharic</span>\
-                        <span><i class="fas fa-file"></i> 5.2 MB</span>\
-                      </div>\
-                      <div class="book-actions">\
-                        <a href="#" class="btn btn-outline btn-sm">Preview</a>\
-                        <a href="#" class="btn btn-primary btn-sm">Download</a>\
-                      </div>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="book-card">\
-                    <div class="book-cover">\
-                      <i class="fas fa-headphones"></i>\
-                      <span class="format-badge">Audio</span>\
-                    </div>\
-                    <div class="book-info">\
-                      <h3>Seerah of the Prophet</h3>\
-                      <p class="author">Various Scholars</p>\
-                      <div class="book-meta">\
-                        <span><i class="fas fa-language"></i> Oromiffa</span>\
-                        <span><i class="fas fa-clock"></i> 12h 45m</span>\
-                      </div>\
-                      <div class="book-actions">\
-                        <a href="#" class="btn btn-outline btn-sm">Listen</a>\
-                        <a href="#" class="btn btn-primary btn-sm">Download</a>\
-                      </div>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="book-card">\
-                    <div class="book-cover">\
-                      <i class="fas fa-book"></i>\
-                      <span class="format-badge">ePub</span>\
-                    </div>\
-                    <div class="book-info">\
-                      <h3>Riyadus Saliheen</h3>\
-                      <p class="author">Imam Nawawi</p>\
-                      <div class="book-meta">\
-                        <span><i class="fas fa-language"></i> English</span>\
-                        <span><i class="fas fa-file"></i> 3.7 MB</span>\
-                      </div>\
-                      <div class="book-actions">\
-                        <a href="#" class="btn btn-outline btn-sm">Read Online</a>\
-                        <a href="#" class="btn btn-primary btn-sm">Download</a>\
-                      </div>\
-                    </div>\
-                  </div>\
-                  \
-                  <div class="book-card">\
-                    <div class="book-cover">\
-                      <i class="fas fa-video"></i>\
-                      <span class="format-badge">Video</span>\
-                    </div>\
-                    <div class="book-info">\
-                      <h3>Islamic History Series</h3>\
-                      <p class="author">Dr. Abdullah Hakim Quick</p>\
-                      <div class="book-meta">\
-                        <span><i class="fas fa-language"></i> English</span>\
-                        <span><i class="fas fa-film"></i> 8 Episodes</span>\
-                      </div>\
-                      <div class="book-actions">\
-                        <a href="#" class="btn btn-outline btn-sm">Watch Trailer</a>\
-                        <a href="#" class="btn btn-primary btn-sm">Watch Now</a>\
-                      </div>\
-                    </div>\
-                  </div>\
-                </div>\
-                \
-                <div class="pagination">\
-                  <a href="#" class="page-link active">1</a>\
-                  <a href="#" class="page-link">2</a>\
-                  <a href="#" class="page-link">3</a>\
-                  <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>\
-                </div>\
-              </div>';
-            break;
-        }
-        
-        tabContent.innerHTML = content;
-      }
-    }
-    
-    // Initialize first tab content
-    loadTabContent('hadith-tab');
-    
-    // Search functionality
-    const searchForm = document.querySelector('.search-form');
-    if (searchForm) {
-      searchForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const searchTerm = this.querySelector('input[type="text"]').value;
-        const category = this.querySelector('select').value;
-        // In a real implementation, you would handle the search here
-        console.log(`Searching for: ${searchTerm} in category: ${category}`);
-      });
-    }
-  </script>
 </body>
 </html>
