@@ -1,77 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Support the Ethiopian Islamic Affairs Supreme Council through donations. Help us serve the Muslim community.">
+  <meta name="description"
+    content="Support the Ethiopian Islamic Affairs Supreme Council through donations. Help us serve the Muslim community.">
   <title>Donate | Ethiopian Islamic Affairs Supreme Council</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    .donate-section { padding: var(--space-4xl) 0; background: var(--dark); }
-    .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: start; }
-    .donate-info h2 { margin-bottom: var(--space-lg); }
-    .donate-info p { color: var(--gray-400); margin-bottom: var(--space-md); }
-    .donate-purposes { margin: var(--space-xl) 0; }
-    .donate-purposes h3 { color: var(--primary); margin-bottom: var(--space-md); font-size: 1.25rem; }
-    .purpose-list { display: flex; flex-direction: column; gap: var(--space-sm); }
-    .purpose-item { display: flex; align-items: center; gap: var(--space-md); padding: var(--space-md); background: var(--dark-light); border-radius: var(--radius-lg); transition: all var(--transition-base); }
-    .purpose-item:hover { background: var(--dark-lighter); transform: translateX(5px); }
-    .purpose-item i { color: var(--primary); font-size: 1.25rem; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.1); border-radius: var(--radius-md); }
-    .purpose-item span { color: var(--gray-300); }
-    .donate-form-container { background: var(--dark-light); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-xl); padding: var(--space-2xl); }
-    .amount-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-lg); }
-    .amount-btn { padding: var(--space-md); background: var(--dark); border: 2px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); color: var(--white); font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all var(--transition-base); }
-    .amount-btn:hover, .amount-btn.active { border-color: var(--primary); background: rgba(var(--primary-rgb), 0.1); }
-    .bank-info { margin-top: var(--space-xl); padding: var(--space-lg); background: var(--dark); border-radius: var(--radius-lg); }
-    .bank-info h4 { color: var(--primary); margin-bottom: var(--space-md); }
-    .bank-info p { color: var(--gray-400); font-size: 0.9rem; margin-bottom: var(--space-sm); }
-    .bank-info strong { color: var(--white); }
-    @media (max-width: 768px) { .donate-grid { grid-template-columns: 1fr; } .amount-options { grid-template-columns: repeat(2, 1fr); } }
+    .donate-section {
+      padding: var(--space-4xl) 0;
+      background: var(--dark);
+    }
+
+    .donate-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    .donate-info h2 {
+      margin-bottom: var(--space-lg);
+    }
+
+    .donate-info p {
+      color: var(--gray-400);
+      margin-bottom: var(--space-md);
+    }
+
+    .donate-purposes {
+      margin: var(--space-xl) 0;
+    }
+
+    .donate-purposes h3 {
+      color: var(--primary);
+      margin-bottom: var(--space-md);
+      font-size: 1.25rem;
+    }
+
+    .purpose-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .purpose-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-md);
+      background: var(--dark-light);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-base);
+    }
+
+    .purpose-item:hover {
+      background: var(--dark-lighter);
+      transform: translateX(5px);
+    }
+
+    .purpose-item i {
+      color: var(--primary);
+      font-size: 1.25rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(var(--primary-rgb), 0.1);
+      border-radius: var(--radius-md);
+    }
+
+    .purpose-item span {
+      color: var(--gray-300);
+    }
+
+    .donate-form-container {
+      background: var(--dark-light);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+    }
+
+    .amount-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .amount-btn {
+      padding: var(--space-md);
+      background: var(--dark);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+
+    .amount-btn:hover,
+    .amount-btn.active {
+      border-color: var(--primary);
+      background: rgba(var(--primary-rgb), 0.1);
+    }
+
+    .bank-info {
+      margin-top: var(--space-xl);
+      padding: var(--space-lg);
+      background: var(--dark);
+      border-radius: var(--radius-lg);
+    }
+
+    .bank-info h4 {
+      color: var(--primary);
+      margin-bottom: var(--space-md);
+    }
+
+    .bank-info p {
+      color: var(--gray-400);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .bank-info strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .donate-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .amount-options {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
+
 <body>
   <!-- Header -->
-  <header>
-    <div class="top-bar">
-      <div class="container">
-        <div class="contact-info">
-          <span><i class="fas fa-phone-alt"></i> +251 114 664 941</span>
-          <span><i class="fas fa-envelope"></i> <a href="mailto:info@ethiopianmajlis.org.et">info@ethiopianmajlis.org.et</a></span>
-        </div>
-        <a href="donate.html" class="donate-btn"><i class="fas fa-heart"></i> Donate</a>
-      </div>
-    </div>
-    <div class="main-header">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="logo-img">
-        </a>
-                <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="regional-majlis.html">Regional Majlis</a></li>
-            <li><a href="islamic-heritage.html">Resources</a></li>
-            <li><a href="women-and-youth.html">Women and Youth</a></li>
-            <li><a href="who-we-are.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact-us.html">Contact</a></li>
-          </ul>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <!-- Header Section -->
+  <header id="main-header"></header>
+  <script src="navbar.js"></script>
 
   <main>
     <section class="page-hero">
@@ -92,9 +176,11 @@
         <div class="donate-grid">
           <div class="donate-info">
             <h2>Make a Difference</h2>
-            <p>Your generous donations help us continue our mission of serving the Ethiopian Muslim community through education, social services, and community development programs.</p>
-            <p>"The example of those who spend their wealth in the way of Allah is like a seed which grows seven spikes; in each spike is a hundred grains." - Quran 2:261</p>
-            
+            <p>Your generous donations help us continue our mission of serving the Ethiopian Muslim community through
+              education, social services, and community development programs.</p>
+            <p>"The example of those who spend their wealth in the way of Allah is like a seed which grows seven spikes;
+              in each spike is a hundred grains." - Quran 2:261</p>
+
             <div class="donate-purposes">
               <h3>Your Donation Supports</h3>
               <div class="purpose-list">
@@ -121,13 +207,13 @@
               </div>
             </div>
           </div>
-          
+
           <div class="donate-form-container">
             <div class="form-header">
               <h3>Choose Donation Amount</h3>
               <p>Select a preset amount or enter a custom amount</p>
             </div>
-            
+
             <div class="amount-options">
               <button class="amount-btn" data-amount="100">100 ETB</button>
               <button class="amount-btn" data-amount="500">500 ETB</button>
@@ -136,7 +222,7 @@
               <button class="amount-btn" data-amount="10000">10,000 ETB</button>
               <button class="amount-btn" data-amount="custom">Custom</button>
             </div>
-            
+
             <form id="donateForm">
               <div class="form-group">
                 <label for="customAmount">Amount (ETB)</label>
@@ -165,7 +251,7 @@
                 <i class="fas fa-heart"></i> Donate Now
               </button>
             </form>
-            
+
             <div class="bank-info">
               <h4><i class="fas fa-university"></i> Bank Transfer Details</h4>
               <p><strong>Bank:</strong> Commercial Bank of Ethiopia</p>
@@ -184,10 +270,12 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-about">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="footer-logo">
+          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo"
+            class="footer-logo">
           <p>The country's highest Islamic authority, representing Ethiopian Muslims both domestically and abroad.</p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
             <a href="https://x.com/eiasc1?s=20" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="tel:+251920400400" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
@@ -229,7 +317,7 @@
   <script>
     // Donation amount selection
     document.querySelectorAll('.amount-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function () {
         document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         const amount = this.dataset.amount;
@@ -240,11 +328,12 @@
         }
       });
     });
-    
-    document.getElementById('donateForm').addEventListener('submit', function(e) {
+
+    document.getElementById('donateForm').addEventListener('submit', function (e) {
       e.preventDefault();
       alert('Thank you for your generous donation! Our team will contact you with payment instructions.');
     });
   </script>
 </body>
+
 </html>

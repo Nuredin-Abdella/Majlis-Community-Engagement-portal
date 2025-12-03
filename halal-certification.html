@@ -1,74 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get Halal certification for your food products and establishments from the Ethiopian Islamic Affairs Supreme Council.">
+  <meta name="description"
+    content="Get Halal certification for your food products and establishments from the Ethiopian Islamic Affairs Supreme Council.">
   <title>Halal Certification | Ethiopian Islamic Affairs Supreme Council</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    .process-section { padding: var(--space-4xl) 0; background: var(--dark-light); }
-    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-xl); margin-top: var(--space-2xl); }
-    .step-card { background: var(--dark); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-xl); padding: var(--space-xl); text-align: center; position: relative; }
-    .step-number { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: var(--primary); color: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; }
-    .step-card h3 { color: var(--white); margin: var(--space-lg) 0 var(--space-sm); font-size: 1.1rem; }
-    .step-card p { color: var(--gray-400); font-size: 0.9rem; }
-    .benefits-section { padding: var(--space-4xl) 0; background: var(--dark); }
-    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl); }
-    .benefit-card { display: flex; gap: var(--space-md); padding: var(--space-lg); background: var(--dark-light); border-radius: var(--radius-lg); transition: all var(--transition-base); }
-    .benefit-card:hover { transform: translateX(5px); border-left: 3px solid var(--primary); }
-    .benefit-icon { width: 50px; height: 50px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(var(--primary-rgb), 0.1); border-radius: var(--radius-md); color: var(--primary); font-size: 1.25rem; }
-    .benefit-card h4 { color: var(--white); margin-bottom: var(--space-xs); font-size: 1rem; }
-    .benefit-card p { color: var(--gray-400); font-size: 0.9rem; margin: 0; }
-    .requirements-section { padding: var(--space-4xl) 0; background: var(--dark-light); }
-    .requirements-list { max-width: 800px; margin: 0 auto; }
-    .requirement-item { display: flex; align-items: flex-start; gap: var(--space-md); padding: var(--space-md) 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .requirement-item i { color: var(--success); margin-top: 4px; }
-    .requirement-item p { color: var(--gray-300); margin: 0; }
+    .process-section {
+      padding: var(--space-4xl) 0;
+      background: var(--dark-light);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+    }
+
+    .step-card {
+      background: var(--dark);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: var(--dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .step-card h3 {
+      color: var(--white);
+      margin: var(--space-lg) 0 var(--space-sm);
+      font-size: 1.1rem;
+    }
+
+    .step-card p {
+      color: var(--gray-400);
+      font-size: 0.9rem;
+    }
+
+    .benefits-section {
+      padding: var(--space-4xl) 0;
+      background: var(--dark);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .benefit-card {
+      display: flex;
+      gap: var(--space-md);
+      padding: var(--space-lg);
+      background: var(--dark-light);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-base);
+    }
+
+    .benefit-card:hover {
+      transform: translateX(5px);
+      border-left: 3px solid var(--primary);
+    }
+
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(var(--primary-rgb), 0.1);
+      border-radius: var(--radius-md);
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+
+    .benefit-card h4 {
+      color: var(--white);
+      margin-bottom: var(--space-xs);
+      font-size: 1rem;
+    }
+
+    .benefit-card p {
+      color: var(--gray-400);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .requirements-section {
+      padding: var(--space-4xl) 0;
+      background: var(--dark-light);
+    }
+
+    .requirements-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .requirement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .requirement-item i {
+      color: var(--success);
+      margin-top: 4px;
+    }
+
+    .requirement-item p {
+      color: var(--gray-300);
+      margin: 0;
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="top-bar">
-      <div class="container">
-        <div class="contact-info">
-          <span><i class="fas fa-phone-alt"></i> +251 114 664 941</span>
-          <span><i class="fas fa-envelope"></i> <a href="mailto:info@ethiopianmajlis.org.et">info@ethiopianmajlis.org.et</a></span>
-        </div>
-        <a href="donate.html" class="donate-btn"><i class="fas fa-heart"></i> Donate</a>
-      </div>
-    </div>
-    <div class="main-header">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="logo-img">
-        </a>
-                <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="regional-majlis.html">Regional Majlis</a></li>
-            <li><a href="islamic-heritage.html">Resources</a></li>
-            <li><a href="women-and-youth.html">Women and Youth</a></li>
-            <li><a href="who-we-are.html">About Us</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="contact-us.html">Contact</a></li>
-          </ul>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <!-- Header Section -->
+  <header id="main-header"></header>
+  <script src="navbar.js"></script>
 
   <main>
     <section class="page-hero">
@@ -89,9 +170,13 @@
         <div class="about-grid">
           <div class="about-content">
             <h2>Official Halal Certification</h2>
-            <p class="lead">Get your food products, restaurants, and food processing facilities certified as Halal according to Islamic dietary laws.</p>
-            <p>The Ethiopian Islamic Affairs Supreme Council provides comprehensive halal certification services to ensure that food products and establishments comply with Islamic dietary requirements. Our certification is recognized nationally and helps businesses reach the Muslim consumer market.</p>
-            <p>Our team of qualified inspectors and Islamic scholars work together to verify compliance with halal standards, from ingredient sourcing to production processes.</p>
+            <p class="lead">Get your food products, restaurants, and food processing facilities certified as Halal
+              according to Islamic dietary laws.</p>
+            <p>The Ethiopian Islamic Affairs Supreme Council provides comprehensive halal certification services to
+              ensure that food products and establishments comply with Islamic dietary requirements. Our certification
+              is recognized nationally and helps businesses reach the Muslim consumer market.</p>
+            <p>Our team of qualified inspectors and Islamic scholars work together to verify compliance with halal
+              standards, from ingredient sourcing to production processes.</p>
             <a href="contact-us.html" class="btn btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
           </div>
           <div class="about-image">
@@ -233,23 +318,49 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-about">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="footer-logo">
+          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo"
+            class="footer-logo">
           <p>The country's highest Islamic authority, representing Ethiopian Muslims both domestically and abroad.</p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
             <a href="https://x.com/eiasc1?s=20" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="tel:+251920400400" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="footer-links">
-          <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="who-we-are.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="contact-us.html">Contact</a></li></ul></div>
-          <div class="footer-column"><h4>Services</h4><ul><li><a href="community-registration.html">Community Registration</a></li><li><a href="halal-certification.html">Halal Certification</a></li><li><a href="hajj-and-umrah.html">Hajj & Umrah</a></li></ul></div>
-          <div class="footer-column"><h4>Resources</h4><ul><li><a href="islamic-heritage.html">Islamic Heritage</a></li><li><a href="regional-majlis.html">Regional Majlis</a></li></ul></div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="who-we-are.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="community-registration.html">Community Registration</a></li>
+              <li><a href="halal-certification.html">Halal Certification</a></li>
+              <li><a href="hajj-and-umrah.html">Hajj & Umrah</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="islamic-heritage.html">Islamic Heritage</a></li>
+              <li><a href="regional-majlis.html">Regional Majlis</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="copyright"><p>&copy; 2025 Ethiopian Islamic Affairs Supreme Council. All rights reserved.</p></div>
+      <div class="copyright">
+        <p>&copy; 2025 Ethiopian Islamic Affairs Supreme Council. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>

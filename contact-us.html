@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact the Ethiopian Islamic Affairs Supreme Council. Get in touch with us for inquiries, support, or to visit our offices.">
+  <meta name="description"
+    content="Contact the Ethiopian Islamic Affairs Supreme Council. Get in touch with us for inquiries, support, or to visit our offices.">
   <title>Contact Us | Ethiopian Islamic Affairs Supreme Council</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  
+
   <style>
     /* Enhanced Contact Page Styles */
     .contact-hero {
-      background: linear-gradient(135deg, rgba(10,15,20,0.9), rgba(26,95,74,0.8)), 
-                  url('assets/wp-content/uploads/2023/05/najashi.png') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(10, 15, 20, 0.9), rgba(26, 95, 74, 0.8)),
+        url('assets/wp-content/uploads/2023/05/najashi.png') center/cover no-repeat;
       min-height: 60vh;
       display: flex;
       align-items: center;
@@ -26,96 +30,96 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .contact-hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at center, transparent 0%, rgba(10,15,20,0.7) 70%);
+      background: radial-gradient(circle at center, transparent 0%, rgba(10, 15, 20, 0.7) 70%);
     }
-    
+
     .contact-hero-content {
       position: relative;
       z-index: 2;
       max-width: 800px;
       padding: var(--space-xl);
     }
-    
+
     .contact-hero h1 {
       font-size: clamp(2.5rem, 5vw, 4rem);
       margin-bottom: var(--space-lg);
-      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
-    
+
     .contact-hero p {
       font-size: 1.25rem;
       color: var(--gray-300);
       margin-bottom: var(--space-xl);
     }
-    
+
     .quick-contact {
       display: flex;
       justify-content: center;
       gap: var(--space-xl);
       flex-wrap: wrap;
     }
-    
+
     .quick-contact-item {
       display: flex;
       align-items: center;
       gap: var(--space-sm);
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       padding: var(--space-md) var(--space-lg);
       border-radius: var(--radius-full);
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all var(--transition-base);
     }
-    
+
     .quick-contact-item:hover {
-      background: rgba(var(--primary-rgb),0.2);
+      background: rgba(var(--primary-rgb), 0.2);
       transform: translateY(-3px);
     }
-    
+
     .quick-contact-item i {
       color: var(--primary);
       font-size: 1.25rem;
     }
-    
+
     .quick-contact-item span {
       color: var(--white);
       font-weight: 600;
     }
-    
+
     /* Main Contact Section */
     .main-contact {
       padding: var(--space-4xl) 0;
       background: var(--dark);
     }
-    
+
     .contact-layout {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
       gap: var(--space-4xl);
       align-items: start;
     }
-    
+
     /* Contact Methods */
     .contact-methods {
       display: grid;
       gap: var(--space-xl);
     }
-    
+
     .contact-method {
       background: linear-gradient(135deg, var(--dark-light), var(--dark-lighter));
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-xl);
       padding: var(--space-xl);
       transition: all var(--transition-base);
       position: relative;
       overflow: hidden;
     }
-    
+
     .contact-method::before {
       content: '';
       position: absolute;
@@ -127,24 +131,24 @@
       transform: scaleY(0);
       transition: transform var(--transition-base);
     }
-    
+
     .contact-method:hover::before {
       transform: scaleY(1);
     }
-    
+
     .contact-method:hover {
       transform: translateX(8px);
       box-shadow: var(--shadow-xl);
       border-color: rgba(var(--primary-rgb), 0.3);
     }
-    
+
     .method-header {
       display: flex;
       align-items: center;
       gap: var(--space-md);
       margin-bottom: var(--space-lg);
     }
-    
+
     .method-icon {
       width: 60px;
       height: 60px;
@@ -156,18 +160,18 @@
       color: var(--primary);
       font-size: 1.5rem;
     }
-    
+
     .method-header h3 {
       color: var(--white);
       margin: 0;
       font-size: 1.25rem;
     }
-    
+
     .method-details {
       display: grid;
       gap: var(--space-sm);
     }
-    
+
     .method-item {
       display: flex;
       align-items: center;
@@ -176,36 +180,36 @@
       border-radius: var(--radius-md);
       transition: all var(--transition-fast);
     }
-    
+
     .method-item:hover {
       background: rgba(var(--primary-rgb), 0.1);
       padding-left: var(--space-md);
     }
-    
+
     .method-item i {
       color: var(--primary);
       width: 20px;
     }
-    
+
     .method-item a {
       color: var(--gray-300);
       transition: color var(--transition-fast);
     }
-    
+
     .method-item a:hover {
       color: var(--primary-light);
     }
-    
+
     /* Enhanced Form */
     .contact-form-wrapper {
       background: linear-gradient(135deg, var(--dark-light), var(--dark-lighter));
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-2xl);
       padding: var(--space-2xl);
       position: relative;
       overflow: hidden;
     }
-    
+
     .contact-form-wrapper::before {
       content: '';
       position: absolute;
@@ -215,38 +219,38 @@
       height: 4px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
     }
-    
+
     .form-header {
       text-align: center;
       margin-bottom: var(--space-2xl);
     }
-    
+
     .form-header h3 {
       color: var(--white);
       margin-bottom: var(--space-sm);
       font-size: 1.75rem;
     }
-    
+
     .form-header p {
       color: var(--gray-400);
       font-size: 1rem;
     }
-    
+
     .form-grid {
       display: grid;
       gap: var(--space-lg);
     }
-    
+
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: var(--space-md);
     }
-    
+
     .form-field {
       position: relative;
     }
-    
+
     .form-field label {
       display: block;
       color: var(--gray-300);
@@ -254,15 +258,15 @@
       margin-bottom: var(--space-sm);
       font-size: 0.9rem;
     }
-    
+
     .required {
       color: var(--error);
     }
-    
+
     .input-wrapper {
       position: relative;
     }
-    
+
     .input-icon {
       position: absolute;
       left: var(--space-md);
@@ -271,30 +275,30 @@
       color: var(--gray-500);
       z-index: 2;
     }
-    
+
     .form-field input,
     .form-field textarea {
       width: 100%;
       padding: var(--space-md) var(--space-md) var(--space-md) 3rem;
       background: var(--dark);
-      border: 2px solid rgba(255,255,255,0.1);
+      border: 2px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-lg);
       color: var(--white);
       font-size: 1rem;
       transition: all var(--transition-base);
     }
-    
+
     .form-field textarea {
       resize: vertical;
       min-height: 120px;
       padding-top: var(--space-md);
     }
-    
-    .form-field textarea + .input-icon {
+
+    .form-field textarea+.input-icon {
       top: var(--space-md);
       transform: none;
     }
-    
+
     .form-field input:focus,
     .form-field textarea:focus {
       outline: none;
@@ -302,12 +306,12 @@
       box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1);
       background: var(--dark-light);
     }
-    
+
     .form-field input::placeholder,
     .form-field textarea::placeholder {
       color: var(--gray-500);
     }
-    
+
     .submit-btn {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: var(--dark);
@@ -325,25 +329,25 @@
       width: 100%;
       margin-top: var(--space-lg);
     }
-    
+
     .submit-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.4);
     }
-    
+
     /* Interactive Map */
     .map-section {
       padding: var(--space-4xl) 0;
       background: var(--dark-light);
     }
-    
+
     .map-wrapper {
       border-radius: var(--radius-2xl);
       overflow: hidden;
       box-shadow: var(--shadow-xl);
       position: relative;
     }
-    
+
     .map-wrapper::before {
       content: '';
       position: absolute;
@@ -354,29 +358,29 @@
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       z-index: 2;
     }
-    
+
     /* Office Locations */
     .offices-section {
       padding: var(--space-4xl) 0;
       background: var(--dark);
     }
-    
+
     .offices-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: var(--space-xl);
     }
-    
+
     .office-card {
       background: linear-gradient(135deg, var(--dark-light), var(--dark-lighter));
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-xl);
       padding: var(--space-xl);
       transition: all var(--transition-base);
       position: relative;
       overflow: hidden;
     }
-    
+
     .office-card::before {
       content: '';
       position: absolute;
@@ -388,24 +392,24 @@
       transform: scaleX(0);
       transition: transform var(--transition-base);
     }
-    
+
     .office-card:hover::before {
       transform: scaleX(1);
     }
-    
+
     .office-card:hover {
       transform: translateY(-8px);
       box-shadow: var(--shadow-xl);
       border-color: rgba(var(--primary-rgb), 0.3);
     }
-    
+
     .office-header {
       display: flex;
       align-items: center;
       gap: var(--space-md);
       margin-bottom: var(--space-lg);
     }
-    
+
     .office-icon {
       width: 50px;
       height: 50px;
@@ -417,18 +421,18 @@
       color: var(--primary);
       font-size: 1.25rem;
     }
-    
+
     .office-header h3 {
       color: var(--white);
       margin: 0;
       font-size: 1.1rem;
     }
-    
+
     .office-details {
       display: grid;
       gap: var(--space-sm);
     }
-    
+
     .office-detail {
       display: flex;
       align-items: flex-start;
@@ -436,13 +440,13 @@
       color: var(--gray-400);
       font-size: 0.9rem;
     }
-    
+
     .office-detail i {
       color: var(--primary);
       margin-top: 2px;
       width: 16px;
     }
-    
+
     /* Responsive Design */
     @media (max-width: 1024px) {
       .contact-layout {
@@ -450,64 +454,32 @@
         gap: var(--space-2xl);
       }
     }
-    
+
     @media (max-width: 768px) {
       .contact-hero {
         min-height: 50vh;
       }
-      
+
       .quick-contact {
         flex-direction: column;
         align-items: center;
       }
-      
+
       .form-row {
         grid-template-columns: 1fr;
       }
-      
+
       .offices-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <div class="top-bar">
-      <div class="container">
-        <div class="contact-info">
-          <span><i class="fas fa-phone-alt"></i> +251 114 664 941</span>
-          <span><i class="fas fa-envelope"></i> <a href="mailto:info@ethiopianmajlis.org.et">info@ethiopianmajlis.org.et</a></span>
-        </div>
-        <a href="donate.html" class="donate-btn"><i class="fas fa-heart"></i> Donate</a>
-      </div>
-    </div>
-    <div class="main-header">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="logo-img">
-        </a>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="regional-majlis.html">Regional Majlis</a></li>
-            <li><a href="islamic-heritage.html">Resources</a></li>
-            <li><a href="women-and-youth.html">Women and Youth</a></li>
-            <li><a href="who-we-are.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact-us.html" class="active">Contact</a></li>
-          </ul>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <!-- Header Section -->
+  <header id="main-header"></header>
+  <script src="navbar.js"></script>
 
   <main>
     <!-- Hero Section -->
@@ -531,15 +503,15 @@
         </div>
       </div>
     </section>
-    
-<!-- Main Contact Section -->
+
+    <!-- Main Contact Section -->
     <section class="main-contact">
       <div class="container">
         <div class="section-header">
           <h2>Contact Information</h2>
           <p>Choose the best way to reach us</p>
         </div>
-        
+
         <div class="contact-layout">
           <!-- Contact Methods -->
           <div class="contact-methods">
@@ -565,7 +537,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="contact-method">
               <div class="method-header">
                 <div class="method-icon">
@@ -588,7 +560,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="contact-method">
               <div class="method-header">
                 <div class="method-icon">
@@ -611,7 +583,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="contact-method">
               <div class="method-header">
                 <div class="method-icon">
@@ -635,14 +607,14 @@
               </div>
             </div>
           </div>
-          
+
           <!-- Contact Form -->
           <div class="contact-form-wrapper">
             <div class="form-header">
               <h3>Send Us a Message</h3>
               <p>Fill out the form below and we'll get back to you within 24 hours</p>
             </div>
-            
+
             <form id="contactForm" class="form-grid">
               <div class="form-row">
                 <div class="form-field">
@@ -660,7 +632,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="form-row">
                 <div class="form-field">
                   <label for="email">Email Address <span class="required">*</span></label>
@@ -677,7 +649,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="form-field">
                 <label for="subject">Subject <span class="required">*</span></label>
                 <div class="input-wrapper">
@@ -685,7 +657,7 @@
                   <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
                 </div>
               </div>
-              
+
               <div class="form-field">
                 <label for="department">Department</label>
                 <div class="input-wrapper">
@@ -702,15 +674,16 @@
                   </select>
                 </div>
               </div>
-              
+
               <div class="form-field">
                 <label for="message">Message <span class="required">*</span></label>
                 <div class="input-wrapper">
                   <i class="input-icon fas fa-comment-alt"></i>
-                  <textarea id="message" name="message" placeholder="Please describe your inquiry in detail..." required></textarea>
+                  <textarea id="message" name="message" placeholder="Please describe your inquiry in detail..."
+                    required></textarea>
                 </div>
               </div>
-              
+
               <button type="submit" class="submit-btn">
                 <i class="fas fa-paper-plane"></i>
                 Send Message
@@ -720,7 +693,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Interactive Map -->
     <section class="map-section" id="map">
       <div class="container">
@@ -729,20 +702,15 @@
           <p>Located in the heart of Addis Ababa</p>
         </div>
         <div class="map-wrapper">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.7848!3d9.0227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDEnMjEuMyJOIDM4wrA0NycwNS4zIkU!5e0!3m2!1sen!2set!4v1234567890123" 
-            width="100%" 
-            height="500" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Ethiopian Islamic Affairs Supreme Council Location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.7848!3d9.0227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDEnMjEuMyJOIDM4wrA0NycwNS4zIkU!5e0!3m2!1sen!2set!4v1234567890123"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Ethiopian Islamic Affairs Supreme Council Location">
           </iframe>
         </div>
       </div>
     </section>
-    
+
     <!-- Office Locations -->
     <section class="offices-section">
       <div class="container">
@@ -750,7 +718,7 @@
           <h2>Our Office Network</h2>
           <p>Serving communities across Ethiopia</p>
         </div>
-        
+
         <div class="offices-grid">
           <div class="office-card">
             <div class="office-header">
@@ -778,7 +746,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="office-card">
             <div class="office-header">
               <div class="office-icon">
@@ -805,7 +773,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="office-card">
             <div class="office-header">
               <div class="office-icon">
@@ -832,7 +800,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="office-card">
             <div class="office-header">
               <div class="office-icon">
@@ -869,10 +837,12 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-about">
-          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo" class="footer-logo">
+          <img src="assets/wp-content/uploads/2023/05/የኢትዮጵያ_እስልምናlogo-414-removebg-preview.png" alt="Logo"
+            class="footer-logo">
           <p>The country's highest Islamic authority, representing Ethiopian Muslims both domestically and abroad.</p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/share/1P3Zkc5NVA/" aria-label="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
             <a href="https://x.com/eiasc1?s=20" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="tel:+251920400400" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
@@ -914,30 +884,30 @@
   <script src="script.js"></script>
   <script>
     // Enhanced form handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       const formData = new FormData(this);
       const data = Object.fromEntries(formData.entries());
-      
+
       // Show loading state
       const submitBtn = this.querySelector('.submit-btn');
       const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      
+
       // Simulate form submission
       setTimeout(() => {
         // Reset form
         this.reset();
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-        
+
         // Show success message
         showNotification('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
       }, 2000);
     });
-    
+
     // Notification function
     function showNotification(message, type = 'success') {
       const notification = document.createElement('div');
@@ -949,23 +919,23 @@
         </div>
         <button class="notification-close">&times;</button>
       `;
-      
+
       document.body.appendChild(notification);
-      
+
       setTimeout(() => notification.classList.add('show'), 100);
-      
+
       const removeTimer = setTimeout(() => {
         notification.classList.remove('show');
         setTimeout(() => notification.remove(), 300);
       }, 5000);
-      
+
       notification.querySelector('.notification-close').addEventListener('click', () => {
         clearTimeout(removeTimer);
         notification.classList.remove('show');
         setTimeout(() => notification.remove(), 300);
       });
     }
-    
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -981,4 +951,5 @@
     });
   </script>
 </body>
+
 </html></label>option></div>i></div>div></span>a></div></i></div>
