@@ -250,34 +250,33 @@ class PrayerTimes {
   }
 }
 
-/
-  / ============================================
-  // SCROLL ANIMATIONS
-  // ============================================
-  class ScrollAnimations {
-    constructor() {
-      this.elements = $$('.animate-on-scroll, .stat-item, .service-card, .project-card, .news-card, .region-card, .timeline-item');
-      this.init();
-    }
-
-    init() {
-      if (!this.elements.length) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible', 'animated');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-      );
-
-      this.elements.forEach(el => observer.observe(el));
-    }
+//============================================
+// SCROLL ANIMATIONS
+// ============================================
+class ScrollAnimations {
+  constructor() {
+    this.elements = $$('.animate-on-scroll, .stat-item, .service-card, .project-card, .news-card, .region-card, .timeline-item');
+    this.init();
   }
+
+  init() {
+    if (!this.elements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible', 'animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    this.elements.forEach(el => observer.observe(el));
+  }
+}
 
 // ============================================
 // COUNTER ANIMATION
@@ -500,27 +499,27 @@ class FormHandler {
   }
 }
 
-/
-  / ============================================
-  // PARALLAX EFFECT
-  // ============================================
-  class ParallaxEffect {
-    constructor() {
-      this.hero = $('.hero');
-      this.init();
-    }
 
-    init() {
-      if (!this.hero) return;
-
-      window.addEventListener('scroll', debounce(() => {
-        const scrolled = window.pageYOffset;
-        if (scrolled < window.innerHeight) {
-          this.hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-        }
-      }, 10));
-    }
+// ============================================
+// PARALLAX EFFECT
+// ============================================
+class ParallaxEffect {
+  constructor() {
+    this.hero = $('.hero');
+    this.init();
   }
+
+  init() {
+    if (!this.hero) return;
+
+    window.addEventListener('scroll', debounce(() => {
+      const scrolled = window.pageYOffset;
+      if (scrolled < window.innerHeight) {
+        this.hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+      }
+    }, 10));
+  }
+}
 
 // ============================================
 // LAZY LOADING IMAGES
